@@ -6,6 +6,14 @@
   .swiper-wrapper {
     min-height: 100vh;
 
+    .swiper-slide-active,
+    .swiper-slide-next {
+      .slider__item-text {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     @media (max-width: $tablet) and (orientation: portrait) {
       min-height: calc(var(--vh, 1vh) * 100);
     }
@@ -17,6 +25,20 @@
   flex-direction: column;
   padding: 14.6rem 4rem 10rem 9.7rem;
   height: auto;
+
+  &-text {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: transform 1s ease, opacity 1s ease;
+  }
+
+  &.swiper-slide-active,
+  &.swiper-slide-next {
+    .slider__item-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   @media (min-width: $stop-scaling) {
     padding: 146px 40px 100px 97px;

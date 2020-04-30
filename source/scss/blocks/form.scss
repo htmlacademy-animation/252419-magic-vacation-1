@@ -43,6 +43,14 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease;
+
+  .active & {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
   &:focus {
     border: 1px solid $c-purple;
@@ -122,16 +130,6 @@
     @media (max-width: $tablet) and (orientation: landscape) {
       display: block;
     }
-  }
-}
-
-.active {
-  .form__field {
-    animation: fadeInRight 1s ease 0.2s backwards;
-  }
-
-  .form__button {
-    animation: fadeInRight 1s ease 0s backwards;
   }
 }
 
