@@ -4,11 +4,11 @@
     transform: translateY(0);
 
     &--insta {
-      transition-delay: 0.35s;
+      transition-delay: 0.175s;
     }
 
     &--vk {
-      transition-delay: 0.7s;
+      transition-delay: 0.35s;
     }
   }
 }
@@ -188,7 +188,7 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.35s ease, opacity 0.35s ease;
   transform: translateY(10px);
 
   @media (min-width: $stop-scaling) {
