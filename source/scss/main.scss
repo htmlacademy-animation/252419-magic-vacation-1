@@ -1,0 +1,98 @@
+// появление блоков
+.active {
+  .intro__message {
+    animation: fadeIn 1.2s;
+  }
+}
+
+.swiper-slide-active, .swiper-slide-next {
+  .slider__item-text {
+    animation: fadeIn 1.2s;
+  }
+}
+
+.active {
+  .form__field {
+    animation: fadeInRight 1s ease 0.2s backwards;
+  }
+
+  .form__button {
+    animation: fadeInRight 1s ease 0s backwards;
+  }
+}
+
+// вернее меню
+.page-header__menu {
+  a {
+    transition: all 0.3s;
+
+    &::after {
+      width: 0;
+      display: block;
+      transition: all 0.3s;
+    }
+
+    &.active {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// соц сети
+.social-block__toggler {
+  transition: all 0.3s ease;
+  background-color: $c-light;
+
+  & + .social-block__list {
+    transition: all 0.3s ease;
+
+    .social-block__link {
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      transform: translateY(10px);
+
+      svg {
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &::before {
+    transition: all 0.3s ease;
+    background-color: $c-purple;
+  }
+
+  &:focus {
+    color: $c-light;
+    background-color: $c-purple;
+  }
+
+  &:focus,
+  &:hover {
+    & + .social-block__list {
+      pointer-events: auto;
+
+      .social-block__link {
+        transform: translateY(0);
+        transition: transform 0.3s;
+
+        &--insta {
+          transition-delay: 100ms;
+        }
+
+        &--vk {
+          transition-delay: 200ms;
+        }
+      }
+    }
+  }
+}
+
