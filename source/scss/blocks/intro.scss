@@ -135,6 +135,12 @@
   }
 }
 
+.active {
+  .intro__message {
+    animation: fadeIn 1.2s;
+  }
+}
+
 .intro__label {
   margin: 0 0 1.6rem;
   max-width: 25rem;

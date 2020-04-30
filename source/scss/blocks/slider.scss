@@ -124,6 +124,10 @@
   }
 }
 
+.slider__item-text {
+  animation: fadeIn 1.2s;
+}
+
 .slider__controls {
   position: absolute;
   bottom: 2.8rem;
