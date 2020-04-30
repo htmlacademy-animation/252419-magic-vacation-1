@@ -6,14 +6,6 @@
   .swiper-wrapper {
     min-height: 100vh;
 
-    .swiper-slide-active,
-    .swiper-slide-next {
-      .slider__item-text {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     @media (max-width: $tablet) and (orientation: portrait) {
       min-height: calc(var(--vh, 1vh) * 100);
     }
@@ -29,14 +21,14 @@
   &-text {
     opacity: 0;
     transform: translateY(10px);
-    transition: transform 1s ease, opacity 1s ease;
-  }
+    transition: transform 1s, opacity 1s;
 
-  &.swiper-slide-active,
-  &.swiper-slide-next {
-    .slider__item-text {
-      opacity: 1;
-      transform: translateY(0);
+    .active .swiper-slide-active &,
+    .active .swiper-slide-next & {
+      & {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 
