@@ -58,3 +58,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin social-transition {
+  transform: translateY(0);
+  transition: transform 0.3s;
+
+  &--insta {
+    transition-delay: 100ms;
+  }
+
+  &--vk {
+    transition-delay: 200ms;
+  }
+}

@@ -125,6 +125,16 @@
   }
 }
 
+.active {
+  .form__field {
+    animation: fadeInRight 1s ease 0.2s backwards;
+  }
+
+  .form__button {
+    animation: fadeInRight 1s ease 0s backwards;
+  }
+}
+
 .form--result {
   .form__field {
     width: calc(100% - 31rem);
