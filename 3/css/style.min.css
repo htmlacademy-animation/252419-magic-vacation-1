@@ -1273,8 +1273,8 @@ img {
   border-radius: 3rem;
   outline: none;
   opacity: 0;
-  transform: translateX(20px);
-  transition: opacity 0.4s ease 0.1s, transform 0.4s ease; }
+  transform: translateX(100vw);
+  transition: opacity 0.8s ease 0.1s, transform 0.8s ease; }
   .active .form__field {
     opacity: 1;
     transform: translateX(0); }
@@ -1541,7 +1541,7 @@ img {
   line-height: 1.27;
   opacity: 0;
   transform: translateY(10px);
-  transition: transform 0.4s ease, opacity 0.4s ease; }
+  transition: transform 0.8s ease, opacity 0.8s ease; }
   .active .intro__message {
     opacity: 1;
     transform: translateY(0); }
@@ -3089,8 +3089,7 @@ img {
   width: 4rem;
   height: 4rem;
   color: #5f458c;
-  border-radius: 50%;
-  transition: all 0.35s ease; }
+  border-radius: 50%; }
   .social-block__toggler:focus {
     outline: none; }
   @media (max-width: 1024px) and (orientation: portrait) {
@@ -3111,7 +3110,7 @@ img {
     background-color: #ffffff;
     border: 2px solid #ffffff;
     z-index: -1;
-    transition: all 0.35s ease; }
+    transition: width 0.4s ease, height 0.4s ease, background-color 0.5s ease; }
   .social-block__toggler svg {
     position: absolute;
     top: 50%;
@@ -3140,9 +3139,9 @@ img {
         opacity: 1;
         transform: translateY(0); }
         .social-block__toggler:focus + .social-block__list .social-block__link--insta {
-          transition-delay: 0.35s; }
+          transition-delay: 0.175s; }
         .social-block__toggler:focus + .social-block__list .social-block__link--vk {
-          transition-delay: 0.7s; }
+          transition-delay: 0.35s; }
   .social-block__toggler:active, .social-block__toggler:active:focus {
     color: #ffffff; }
     .social-block__toggler:active::before, .social-block__toggler:active:focus::before {
@@ -3206,9 +3205,9 @@ img {
       opacity: 1;
       transform: translateY(0); }
       .social-block--active .social-block__list .social-block__link--insta {
-        transition-delay: 0.35s; }
+        transition-delay: 0.175s; }
       .social-block--active .social-block__list .social-block__link--vk {
-        transition-delay: 0.7s; }
+        transition-delay: 0.35s; }
   .social-block__list li {
     flex: none;
     margin-bottom: 0.5rem; }
@@ -3230,7 +3229,7 @@ img {
   color: #ffffff;
   border: 2px solid transparent;
   border-radius: 50%;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.35s ease, opacity 0.35s ease;
   transform: translateY(10px); }
   @media (min-width: 2000px) {
     .social-block__link {
