@@ -48,7 +48,7 @@
   z-index: 1;
   opacity: 0;
   transform: translateY(100%);
-  transition: opacity 0.4s, transform 0.4s cubic-bezier(0,.03,.32,1);
+  transition: opacity 0.5s, transform 0.4s cubic-bezier(0,.03,.32,1);
 
   .load & {
     opacity: 1;
