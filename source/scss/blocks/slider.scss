@@ -24,6 +24,7 @@
     transition: transform 1s, opacity 1s;
 
     .active .swiper-slide-active &,
+    .active .swiper-slide-prev &,
     .active .swiper-slide-next & {
       & {
         opacity: 1;
