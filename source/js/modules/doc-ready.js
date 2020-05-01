@@ -1,3 +1,3 @@
-export default () => document.addEventListener('DOMContentLoaded', () => {
-  document.body.classList.add('load');
-})
+export default () => document.addEventListener(`DOMContentLoaded`, () => {
+  document.body.classList.add(`load`);
+});
