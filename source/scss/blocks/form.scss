@@ -43,6 +43,14 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  opacity: 0;
+  transform: translateX(100vw);
+  transition: opacity 0.8s ease 0.1s, transform 0.8s ease;
+
+  .active & {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
   &:focus {
     border: 1px solid $c-purple;

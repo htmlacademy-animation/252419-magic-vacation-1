@@ -17,7 +17,6 @@
   flex-direction: column;
   padding: 14.6rem 4rem 10rem 9.7rem;
   height: auto;
-
   @media (min-width: $stop-scaling) {
     padding: 146px 40px 100px 97px;
   }
@@ -95,6 +94,9 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: transform 1s, opacity 1s;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
@@ -121,6 +123,25 @@
     min-height: 14rem;
     font-size: 1.4rem;
     line-height: 1.5rem;
+  }
+
+  @media (max-width: $mobile) {
+    .active .swiper-slide-active & {
+      & {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @media (min-width: $mobile) {
+    .active .swiper-slide-next &,
+    .active .swiper-slide-active & {
+      & {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 }
 

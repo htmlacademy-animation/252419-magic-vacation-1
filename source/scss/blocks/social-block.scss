@@ -1,3 +1,18 @@
+@mixin social-transition {
+  .social-block__link {
+    opacity: 1;
+    transform: translateY(0);
+
+    &--insta {
+      transition-delay: 0.175s;
+    }
+
+    &--vk {
+      transition-delay: 0.35s;
+    }
+  }
+}
+
 .social-block {
   position: relative;
 
@@ -35,6 +50,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: width 0.4s ease, height 0.4s ease, background-color 0.5s ease;
   }
 
   svg {
@@ -55,16 +71,18 @@
   }
 
   &:focus {
-    color: $c-purple;
+    color: $c-light;
     outline: none;
 
     &::before {
       border-color: $c-purple;
+      background-color: $c-purple;
     }
 
     & + .social-block__list {
       opacity: 1;
       pointer-events: auto;
+      @include social-transition;
     }
   }
 
@@ -89,6 +107,7 @@
   margin-top: 1.5rem;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.4s ease;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
@@ -140,6 +159,7 @@
   .social-block--active & {
     opacity: 1;
     pointer-events: auto;
+    @include social-transition;
   }
 
   li {
@@ -168,6 +188,8 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  transform: translateY(10px);
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -204,9 +226,13 @@
 
   svg {
     @include center;
+    transition: color 0.4s ease;
   }
 
   &--fb {
+    opacity: 0;
+    transform: translateY(10px);
+
     svg {
       width: 0.8rem;
       height: 1.7rem;
@@ -219,6 +245,9 @@
   }
 
   &--insta {
+    opacity: 0;
+    transform: translateY(10px);
+
     svg {
       width: 1.5rem;
       height: 1.5rem;
@@ -231,6 +260,9 @@
   }
 
   &--vk {
+    opacity: 0;
+    transform: translateY(10px);
+
     svg {
       width: 1.7rem;
       height: 1rem;
