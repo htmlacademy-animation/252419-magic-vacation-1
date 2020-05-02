@@ -37,7 +37,7 @@
   color: $c-light;
   opacity: 0;
   transform: translateX(-35px);
-  transition: opacity 0.5s cubic-bezier(0, .03, .32, 1), transform 0.5s cubic-bezier(0, .03, .32, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0, .3, 1), transform 0.5s cubic-bezier(0, 0, .3, 1);
 
   .load & {
     opacity: 1;
@@ -139,7 +139,7 @@
   display: flex;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0, .03, .32, 1);
+  transition: opacity 0.5s cubic-bezier(0, 0, .3, 1) 0.3s;
 
   .load & {
     opacity: 1;
