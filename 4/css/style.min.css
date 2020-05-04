@@ -1852,6 +1852,7 @@ img {
           right: 0;
           background-color: #5f458c; } }
     .load .page-header__menu a.active::after {
+      transition-delay: 0.25s;
       transform-origin: left;
       transform: scaleX(1); }
     .page-header__menu a:hover, .page-header__menu a:focus {
@@ -3136,8 +3137,8 @@ img {
     background-color: #ffffff;
     border: 2px solid #ffffff;
     transition-property: width, height, background-color, transform;
-    transition-delay: 0.5s, 0.5s, 0s, 0.1s;
-    transition-duration: 0.5s, 0.5s, 0.5s, 0.35s;
+    transition-delay: 0.5s, 0.5s, 0s, 0.25s;
+    transition-duration: 0.35s, 0.35s, 0.4s, 0.4s;
     transition-timing-function: ease;
     z-index: -1; }
   body.load .social-block__toggler::before {
@@ -3155,6 +3156,7 @@ img {
   .social-block__toggler:hover {
     color: #a67ee5; }
     body.load .social-block__toggler:hover::before {
+      transition-delay: 0.5s, 0.5s, 0s, 0s;
       transform: translate(-50%, -50%) scale(1.125); }
   .social-block__toggler:focus {
     color: #ffffff;
