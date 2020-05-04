@@ -37,7 +37,9 @@
   color: $c-light;
   opacity: 0;
   transform: translateX(-35px);
-  transition: opacity 0.5s cubic-bezier(0, 0, .3, 1), transform 0.5s cubic-bezier(0, 0, .3, 1);
+  transition-property: opacity, transform;
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(0, 0, .3, 1);
 
   .load & {
     opacity: 1;
@@ -139,7 +141,7 @@
   display: flex;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0, 0, .3, 1) 0.3s;
+  transition: opacity 0.35s cubic-bezier(0, 0, .3, 1) 0.1s;
 
   .load & {
     opacity: 1;
@@ -255,7 +257,7 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
-    transition: color 0.35s ease;
+    transition: color 0.7s ease;
 
     &::after {
       content: "";
@@ -267,7 +269,9 @@
       width: 100%;
       transform: scaleX(0);
       transform-origin: right;
-      transition: color 0.35s ease, transform 0.35s ease, background-color 0.35s;
+      transition-property: color, transform, background-color;
+      transition-duration: 0.7s;
+      transition-timing-function: ease;
 
       @media (min-width: $stop-scaling) {
         left: -5px;
