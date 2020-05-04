@@ -3136,7 +3136,7 @@ img {
     background-color: #ffffff;
     border: 2px solid #ffffff;
     transition-property: width, height, background-color, transform;
-    transition-delay: 0.5s, 0.5s, 0s, 0s;
+    transition-delay: 0.5s, 0.5s, 0s, 0.1s;
     transition-duration: 0.5s, 0.5s, 0.5s, 0.35s;
     transition-timing-function: ease;
     z-index: -1; }
@@ -3152,11 +3152,9 @@ img {
     display: block;
     width: 2.3rem;
     height: 2.2rem; }
-  .social-block__toggler:hover,
-  .social-block--active .social-block__toggler {
+  .social-block__toggler:hover {
     color: #a67ee5; }
-    body.load .social-block__toggler:hover::before, body.load
-    .social-block--active .social-block__toggler::before {
+    body.load .social-block__toggler:hover::before {
       transform: translate(-50%, -50%) scale(1.125); }
   .social-block__toggler:focus {
     color: #ffffff;
