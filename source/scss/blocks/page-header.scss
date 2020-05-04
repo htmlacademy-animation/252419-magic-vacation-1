@@ -293,6 +293,7 @@
 
     .load &.active {
       &::after {
+        transition-delay: 0.25s;
         transform-origin: left;
         transform: scaleX(1);
       }
