@@ -1275,50 +1275,60 @@ img {
 .form__field {
   flex: none;
   margin-right: 3rem;
-  padding: 0 5.6rem;
   height: 6rem;
   width: calc(100% - 21rem);
-  text-transform: uppercase;
-  font: inherit;
-  font-size: 2.4rem;
-  line-height: 1.2;
-  color: #5f458c;
-  border: 0;
   border-radius: 3rem;
-  outline: none;
-  opacity: 0;
-  transform: translateX(100vw);
-  transition: opacity 0.8s ease 0.1s, transform 0.8s ease; }
-  .active .form__field {
-    opacity: 1;
-    transform: translateX(0); }
-  .form__field:focus {
-    border: 1px solid #a67ee5; }
+  overflow: hidden; }
+  .form__field .form__input {
+    color: #5f458c;
+    text-transform: uppercase;
+    font: inherit;
+    line-height: 1.2;
+    font-size: 2.4rem;
+    padding: 0 5.6rem;
+    height: 100%;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    outline: none;
+    transform: translateX(110%);
+    transition-property: transform, border-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out, ease;
+    transition-delay: 0.1s, 0s; }
+    .active .form__field .form__input {
+      opacity: 1;
+      transform: translateX(0); }
+    .form__field .form__input:focus {
+      border-color: #a67ee5; }
   @media (min-width: 2000px) {
     .form__field {
       margin-right: 30px;
-      padding: 0 56px;
       height: 60px;
       width: calc(100% - 210px);
-      font-size: 24px;
-      border-radius: 30px; } }
+      border-radius: 30px; }
+      .form__field .form__input {
+        font-size: 24px;
+        padding: 0 56px; } }
   @media (orientation: portrait) {
     .form__field {
       margin-right: 1rem;
-      padding: 0 2.5rem;
       width: calc(100% - 5rem);
-      height: 4rem;
-      font-size: 1.6rem; } }
+      height: 4rem; }
+      .form__field .form__input {
+        font-size: 1.6rem;
+        padding: 0 2.5rem; } }
   @media (max-width: 1024px) and (orientation: landscape) {
     .form__field {
       width: calc(100% - 9rem); } }
   @media (max-width: 768px) and (orientation: landscape) {
     .form__field {
       margin-right: 1rem;
-      padding: 0 2.5rem;
       width: calc(100% - 5rem);
-      height: 4rem;
-      font-size: 1.6rem; } }
+      height: 4rem; }
+      .form__field .form__input {
+        font-size: 1.6rem;
+        padding: 0 2.5rem; } }
 
 .form__button {
   flex-grow: 1; }
