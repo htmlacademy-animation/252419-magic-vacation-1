@@ -32,24 +32,30 @@
 .form__field {
   flex: none;
   margin-right: 3rem;
-  padding: 0 5.6rem;
   height: 6rem;
   width: calc(100% - 21rem);
-  text-transform: uppercase;
-  font: inherit;
-  font-size: 2.4rem;
-  line-height: 1.2;
-  color: $c-dark;
-  border: 0;
   border-radius: 3rem;
-  outline: none;
-  opacity: 0;
-  transform: translateX(100vw);
-  transition: opacity 0.8s ease 0.1s, transform 0.8s ease;
+  overflow: hidden;
 
-  .active & {
-    opacity: 1;
-    transform: translateX(0);
+  .form__input {
+    color: $c-dark;
+    text-transform: uppercase;
+    font: inherit;
+    line-height: 1.2;
+    font-size: 2.4rem;
+    padding: 0 5.6rem;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    border-radius: 3rem;
+    outline: none;
+    transform: translateX(110%);
+    transition: transform 0.4s ease-out 0.1s;
+
+    .active & {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   &:focus {
