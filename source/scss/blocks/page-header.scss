@@ -291,7 +291,7 @@
       }
     }
 
-    .load &.active {
+    .load &.active:not(:hover) {
       &::after {
         transition-delay: 0.25s;
         transform-origin: left;
