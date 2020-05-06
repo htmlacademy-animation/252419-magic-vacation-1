@@ -921,7 +921,7 @@ img {
   overflow: hidden; }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -929,10 +929,9 @@ img {
   background-color: #5f458c;
   transform-origin: bottom;
   transform: scaleY(0);
-  transition: transform 0.5s ease; }
-
-.overlay--active {
-  transform: scaleY(1); }
+  transition: transform 0.7s ease; }
+  .active .overlay {
+    transform: scaleY(1); }
 
 .animation-screen {
   position: fixed;
@@ -1297,7 +1296,6 @@ img {
     transition-timing-function: ease-out, ease;
     transition-delay: 0.1s, 0s; }
     .active .form__field .form__input {
-      opacity: 1;
       transform: translateX(0); }
     .form__field .form__input:focus {
       border-color: #a67ee5; }
@@ -2607,7 +2605,7 @@ img {
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
   transition-delay: 0.2s; }
-  .active .screen__disclaimer {
+  .load .active .screen__disclaimer {
     opacity: 1;
     transform: translateX(0); }
 
@@ -2625,7 +2623,7 @@ img {
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
   transition-delay: 0.2s; }
-  .active .screen__footer {
+  .load .active .screen__footer {
     opacity: 1;
     transform: translateX(0); }
   @media (max-width: 1024px) and (orientation: portrait) {
@@ -2840,7 +2838,7 @@ img {
 .screen--story {
   background-color: #5f458c;
   background-image: url("../img/slide1.jpg"), url("../img/slide2.jpg"), url("../img/slide3.jpg"), url("../img/slide4.jpg");
-  z-index: 0;
+  z-index: 1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -2856,12 +2854,8 @@ img {
       background-size: auto calc(100vh - 13.8rem), 100% 25rem;
       background-position: top center, bottom center; } }
 
-.screen--prizes {
-  background-color: #5f458c; }
-
 .screen--game {
-  position: relative;
-  background-color: #5f458c; }
+  position: relative; }
   .screen--game::before {
     content: "";
     position: absolute;
@@ -2895,12 +2889,6 @@ img {
   .screen--result.screen--show {
     opacity: 1;
     pointer-events: auto; }
-
-.screen--rules {
-  background-color: #5f458c; }
-
-.screen--intro {
-  background-color: #5f458c; }
 
 .slider {
   position: relative;
