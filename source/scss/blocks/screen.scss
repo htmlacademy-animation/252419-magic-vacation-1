@@ -42,7 +42,7 @@
   transition-timing-function: cubic-bezier(0, 0, .3, 1);
   transition-delay: 0.2s;
 
-  .active & {
+  .load .active & {
     opacity: 1;
     transform: translateX(0);
   }
@@ -63,7 +63,7 @@
   transition-timing-function: cubic-bezier(0, 0, .3, 1);
   transition-delay: 0.2s;
 
-  .active & {
+  .load .active & {
     opacity: 1;
     transform: translateX(0);
   }
@@ -312,7 +312,7 @@
 .screen--story {
   background-color: $c-dark;
   background-image: url("../img/slide1.jpg"), url("../img/slide2.jpg"), url("../img/slide3.jpg"), url("../img/slide4.jpg");
-  z-index: 0;
+  z-index: 1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -336,13 +336,8 @@
   }
 }
 
-.screen--prizes {
-  background-color: $c-dark;
-}
-
 .screen--game {
   position: relative;
-  background-color: $c-dark;
 
   &::before {
     content: "";
@@ -386,10 +381,4 @@
   }
 }
 
-.screen--rules {
-  background-color: $c-dark;
-}
-
-.screen--intro {
-  background-color: $c-dark;
-}
+.screen--rules {}

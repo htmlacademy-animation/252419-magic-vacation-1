@@ -1,5 +1,5 @@
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -7,9 +7,9 @@
   background-color: $c-dark;
   transform-origin: bottom;
   transform: scaleY(0);
-  transition: transform 0.5s ease;
-}
+  transition: transform 0.7s ease;
 
-.overlay--active {
-  transform: scaleY(1);
+  .active & {
+    transform: scaleY(1);
+  }
 }

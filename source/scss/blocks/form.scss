@@ -56,7 +56,6 @@
     transition-delay: 0.1s, 0s;
 
     .active & {
-      opacity: 1;
       transform: translateX(0);
     }
 
