@@ -14,6 +14,7 @@
 
 .slider__item {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   padding: 14.6rem 4rem 10rem 9.7rem;
   height: auto;
