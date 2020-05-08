@@ -7,7 +7,7 @@
   background-color: $c-dark;
   transform-origin: bottom;
   transform: scaleY(0);
-  transition: transform 0.7s ease;
+  transition: transform 1s ease;
 
   .active & {
     transform: scaleY(1);
