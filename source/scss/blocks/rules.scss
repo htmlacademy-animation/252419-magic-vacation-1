@@ -124,6 +124,53 @@
   padding-left: 6.5rem;
   break-inside: avoid;
 
+  .active & p {
+    animation-name: fadeRight;
+    animation-duration: 0.35s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+  }
+
+  &:nth-child(1) {
+    p {
+      animation-delay: 0.5s;
+    }
+
+    &:before {
+      animation-delay: 0.2s;
+    }
+  }
+
+  &:nth-child(2) {
+    p {
+      animation-delay: 0.7s;
+    }
+
+    &:before {
+      animation-delay: 0.4s;
+    }
+  }
+
+  &:nth-child(3) {
+    p {
+      animation-delay: 0.9s;
+    }
+
+    &:before {
+      animation-delay: 0.6s;
+    }
+  }
+
+  &:nth-child(4) {
+    p {
+      animation-delay: 1.2s;
+    }
+
+    &:before {
+      animation-delay: 0.8s;
+    }
+  }
+
   @media (min-width: $stop-scaling) {
     margin: 0 0 62px;
     padding-top: 6px;
@@ -144,7 +191,7 @@
     font-size: 1.2rem;
   }
 
-  &::before {
+  .active &::before {
     content: counter(li);
     counter-increment: li;
     position: absolute;
@@ -159,6 +206,10 @@
     border-radius: 50%;
     line-height: 5rem;
     text-align: center;
+    animation-name: bounceIn;
+    animation-duration: 0.35s;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
 
     @media (max-width: $tablet) and (orientation: portrait) {
       top: 1rem;
@@ -209,5 +260,31 @@
   @media (max-width: $mobile) and (orientation: landscape) {
     bottom: 2rem;
     right: 1.5rem;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
