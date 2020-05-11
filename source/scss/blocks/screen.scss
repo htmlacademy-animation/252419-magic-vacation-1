@@ -7,15 +7,27 @@
   overflow: hidden;
 
   &--hidden {
-
+    width: 0;
+    height: 0;
+    min-height: 0;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     min-height: calc(var(--vh, 1vh) * 100);
+
+    &--hidden {
+      width: 0;
+      min-height: 0;
+    }
   }
 
   @media (max-width: $tablet - 1) and (orientation: landscape) {
     height: 100vh;
+
+    &--hidden {
+      width: 0;
+      height: 0;
+    }
   }
 }
 
