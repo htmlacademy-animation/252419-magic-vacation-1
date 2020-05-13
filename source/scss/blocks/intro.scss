@@ -30,7 +30,7 @@
   font-family: $font-alt;
   font-weight: 400;
   font-size: 12rem;
-  line-height: 0.906;
+  line-height: 1;
   letter-spacing: -0.04em;
 
   @media (min-width: $stop-scaling) {
@@ -156,7 +156,7 @@
   transition-property: opacity;
   transition-duration: 0.4s;
   transition-timing-function: ease;
-  transition-delay: 1.9s;
+  transition-delay: 1.5s;
 
   .active & {
     opacity: 1;
