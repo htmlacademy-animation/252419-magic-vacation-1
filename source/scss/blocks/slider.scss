@@ -97,7 +97,10 @@
   line-height: 2rem;
   opacity: 0;
   transform: translateY(10px);
-  transition: transform 1s, opacity 1s;
+  transition-property: opacity, transform;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-delay: 1s;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;

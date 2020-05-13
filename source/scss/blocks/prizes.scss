@@ -58,6 +58,17 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.2;
+  opacity: 0;
+  transform: translateY(10px);
+  transition-property: opacity, transform;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-delay: 0.9s;
+
+  .active & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 58px;
