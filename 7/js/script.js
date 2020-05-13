@@ -10230,27 +10230,111 @@ __webpack_require__.r(__webpack_exports__);
   };
 
   // module 2 task 2
-  const animationTopScreenTextLine = new _typography_builder__WEBPACK_IMPORTED_MODULE_0__["TypographyBuild"]({
+  // анимация заголовка главной страницы
+  const animationTopScreenTextLine = new _typography_builder__WEBPACK_IMPORTED_MODULE_0__["TypographyBuilder"]({
     elementSelector: `.intro__title`,
     timer: 350,
     classForActivate: `showed`,
     property: `transform`,
   });
 
-  const animationTopScreenDateLine = new _typography_builder__WEBPACK_IMPORTED_MODULE_0__["TypographyBuild"]({
+  const animationTopScreenDateLine = new _typography_builder__WEBPACK_IMPORTED_MODULE_0__["TypographyBuilder"]({
     elementSelector: `.intro__date`,
     timer: 350,
     classForActivate: `showed`,
     property: `transform`,
   });
 
-  setTimeout(() => {
-    animationTopScreenTextLine.runAnimation();
-  }, 500);
+  // анимация заголовка страницы историй
+  const animationTopScreenHistoryItemLine = new _typography_builder__WEBPACK_IMPORTED_MODULE_0__["TypographyBuilder"]({
+    elementSelector: `.slider__item-title`,
+    timer: 350,
+    classForActivate: `showed`,
+    property: `transform`,
+  });
 
-  setTimeout(() => {
-    animationTopScreenDateLine.runAnimation();
-  }, 1500);
+  // анимация заголовка страницы призов
+  const animationTopScreenPrizesLine = new _typography_builder__WEBPACK_IMPORTED_MODULE_0__["TypographyBuilder"]({
+    elementSelector: `.prizes__title`,
+    timer: 350,
+    classForActivate: `showed`,
+    property: `transform`,
+  });
+
+  // анимация заголовка страницы правил
+  const animationTopScreenRulesLine = new _typography_builder__WEBPACK_IMPORTED_MODULE_0__["TypographyBuilder"]({
+    elementSelector: `.rules__title`,
+    timer: 350,
+    classForActivate: `showed`,
+    property: `transform`,
+  });
+
+  // анимация заголовка страницы игры
+  const animationTopScreenGameLine = new _typography_builder__WEBPACK_IMPORTED_MODULE_0__["TypographyBuilder"]({
+    elementSelector: `.game__title`,
+    timer: 350,
+    classForActivate: `showed`,
+    property: `transform`,
+  });
+
+  const pageObserver = (event) => {
+    const pageId = event.detail.screenId;
+
+    animationTopScreenTextLine.destroy();
+    animationTopScreenDateLine.destroy();
+    animationTopScreenHistoryItemLine.destroy();
+    animationTopScreenPrizesLine.destroy();
+    animationTopScreenRulesLine.destroy();
+
+    if (pageId === 0) {
+      // запуск анимации заголовка на главной странице
+      setTimeout(() => {
+        animationTopScreenTextLine.run();
+      }, 500);
+
+      setTimeout(() => {
+        animationTopScreenDateLine.run();
+      }, 1500);
+    }
+
+    if (pageId === 1) {
+      // запуск анимации заголовка на странице историй
+      if (event.detail.screenId === 1) {
+        setTimeout(() => {
+          animationTopScreenHistoryItemLine.run();
+        }, 500);
+      }
+    }
+
+    if (pageId === 2) {
+      // запуск анимации заголовка на странице призов
+      if (event.detail.screenId === 2) {
+        setTimeout(() => {
+          animationTopScreenPrizesLine.run();
+        }, 500);
+      }
+    }
+
+    if (pageId === 3) {
+      // запуск анимации заголовка на странице правил
+      if (event.detail.screenId === 3) {
+        setTimeout(() => {
+          animationTopScreenRulesLine.run();
+        }, 500);
+      }
+    }
+
+    if (pageId === 4) {
+      // запуск анимации заголовка на странице игры
+      if (event.detail.screenId === 4) {
+        setTimeout(() => {
+          animationTopScreenGameLine.run();
+        }, 500);
+      }
+    }
+  };
+
+  document.body.addEventListener(`screenChanged`, pageObserver);
 }));
 
 
@@ -10637,13 +10721,13 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************************************!*\
   !*** ./source/js/modules/typography-builder.js ***!
   \*************************************************/
-/*! exports provided: TypographyBuild */
+/*! exports provided: TypographyBuilder */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TypographyBuild", function() { return TypographyBuild; });
-class TypographyBuild {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TypographyBuilder", function() { return TypographyBuilder; });
+class TypographyBuilder {
   constructor({
     elementSelector = `.intro__title`,
     timer = 500,
@@ -10719,11 +10803,15 @@ class TypographyBuild {
     this._element.appendChild(content);
   }
 
-  runAnimation() {
+  run() {
     if (!this._element) {
       return;
     }
     this._element.classList.add(this._classForActivate);
+  }
+
+  destroy() {
+    this._element.classList.remove(this._classForActivate);
   }
 }
 
@@ -10773,7 +10861,10 @@ Object(_modules_form_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
 Object(_modules_social_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
 
 const fullPageScroll = new _modules_full_page_scroll__WEBPACK_IMPORTED_MODULE_9__["default"]();
-fullPageScroll.init();
+
+setTimeout(() => {
+  fullPageScroll.init();
+}, 0);
 
 
 /***/ }),
