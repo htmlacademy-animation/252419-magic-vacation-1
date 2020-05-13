@@ -95,7 +95,10 @@
   line-height: 1.27;
   opacity: 0;
   transform: translateY(10px);
-  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition-property: transform, opacity;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+  transition-delay: 1.5s;
 
   .active & {
     opacity: 1;
@@ -149,6 +152,15 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.2;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-delay: 1.9s;
+
+  .active & {
+    opacity: 1;
+  }
 
   @media (min-width: $stop-scaling) {
     margin: 0 0 16px;
