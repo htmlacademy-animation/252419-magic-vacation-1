@@ -1,4 +1,4 @@
-export class TypographyBuild {
+export class TypographyBuilder {
   constructor({
     elementSelector = `.intro__title`,
     timer = 500,
@@ -74,10 +74,14 @@ export class TypographyBuild {
     this._element.appendChild(content);
   }
 
-  runAnimation() {
+  run() {
     if (!this._element) {
       return;
     }
     this._element.classList.add(this._classForActivate);
+  }
+
+  destroy() {
+    this._element.classList.remove(this._classForActivate);
   }
 }
