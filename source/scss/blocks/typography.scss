@@ -8,7 +8,7 @@
     transform: translate3d(0, 1.2em, 0);
     display: inline-block;
 
-    .showed & {
+    .active .showed & {
       transform: translate3d(0, 0.2em, 0);
     }
   }
