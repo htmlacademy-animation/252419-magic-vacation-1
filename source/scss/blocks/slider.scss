@@ -185,12 +185,12 @@
   animation-timing-function: cubic-bezier(.46,1.21,.55,1.14);
 
   .active &--prev {
-    animation-name: bounceLeftWithRotate;
+    animation-name: rollOnLeft;
 
   }
 
   .active &--next {
-    animation-name: bounceRightWithRotate;
+    animation-name: rollOnRight;
   }
 
   @media (min-width: $stop-scaling) {
