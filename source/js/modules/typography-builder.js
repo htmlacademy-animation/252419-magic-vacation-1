@@ -1,9 +1,10 @@
 export class TypographyBuilder {
   constructor({
     elementSelector = `.intro__title`,
-    timer = 500,
+    timer = 350,
     classForActivate = `showed`,
     property = `transform`,
+    delay = 500,
   } = {}) {
     this._elementSelector = elementSelector;
     this._timer = timer;
@@ -12,6 +13,7 @@ export class TypographyBuilder {
     this._element = document.querySelector(this._elementSelector);
     this._iterationCount = 0;
     this._staticDelay = 0;
+    this._delay = delay;
 
     this._prePareText();
   }
@@ -20,7 +22,7 @@ export class TypographyBuilder {
     const span = document.createElement(`span`);
 
     span.textContent = letter;
-    span.style.transition = `${this._property} ${this._timer}ms ease ${delay}ms`;
+    span.style.transition = `${this._property} ${this._timer}ms ease ${this._delay + delay}ms`;
 
     return span;
   }
@@ -79,9 +81,5 @@ export class TypographyBuilder {
       return;
     }
     this._element.classList.add(this._classForActivate);
-  }
-
-  destroy() {
-    this._element.classList.remove(this._classForActivate);
   }
 }
