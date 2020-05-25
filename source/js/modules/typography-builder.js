@@ -6,52 +6,52 @@ export class TypographyBuilder {
     property = `transform`,
     delay = 500,
   } = {}) {
-    this._elementSelector = elementSelector;
-    this._timer = timer;
-    this._classForActivate = classForActivate;
-    this._property = property;
-    this._element = document.querySelector(this._elementSelector);
-    this._iterationCount = 0;
-    this._staticDelay = 0;
-    this._delay = delay;
+    this.elementSelector = elementSelector;
+    this.timer = timer;
+    this.classForActivate = classForActivate;
+    this.property = property;
+    this.element = document.querySelector(this.elementSelector);
+    this.iterationCount = 0;
+    this.staticDelay = 0;
+    this.delay = delay;
 
-    this._prePareText();
+    this.prePareText();
   }
 
   _createElement(letter, delay) {
     const span = document.createElement(`span`);
 
     span.textContent = letter;
-    span.style.transition = `${this._property} ${this._timer}ms ease ${this._delay + delay}ms`;
+    span.style.transition = `${this.property} ${this.timer}ms ease ${this.delay + delay}ms`;
 
     return span;
   }
 
   get _delayCreator() {
-    if (this._iterationCount >= 3) {
-      this._iterationCount = 0;
-      this._staticDelay += 150;
+    if (this.iterationCount >= 3) {
+      this.iterationCount = 0;
+      this.staticDelay += 150;
     }
 
-    this._iterationCount += 1;
-    switch (this._iterationCount) {
+    this.iterationCount += 1;
+    switch (this.iterationCount) {
       case 1:
-        return 50 + this._staticDelay;
+        return 50 + this.staticDelay;
       case 3:
-        return 100 + this._staticDelay;
+        return 100 + this.staticDelay;
       case 2:
-        return 150 + this._staticDelay;
+        return 150 + this.staticDelay;
       default:
         return 0;
     }
   }
 
-  _prePareText() {
-    if (!this._element) {
+  prePareText() {
+    if (!this.element) {
       return;
     }
 
-    const text = this._element.textContent
+    const text = this.element.textContent
       .trim()
       .split(` `)
       .filter((latter) => latter !== ``);
@@ -72,14 +72,14 @@ export class TypographyBuilder {
       return fragmentParent;
     }, document.createDocumentFragment());
 
-    this._element.innerHTML = ``;
-    this._element.appendChild(content);
+    this.element.innerHTML = ``;
+    this.element.appendChild(content);
   }
 
   run() {
-    if (!this._element) {
+    if (!this.element) {
       return;
     }
-    this._element.classList.add(this._classForActivate);
+    this.element.classList.add(this.classForActivate);
   }
 }
