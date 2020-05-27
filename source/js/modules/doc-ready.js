@@ -51,25 +51,6 @@ export default () => document.addEventListener(`DOMContentLoaded`, () => {
   animationTopScreenRulesLine.run();
   animationTopScreenGameLine.run();
 
-  document.body.addEventListener(`screenChanged`, (event) => {
-    if (event.detail.screenId === 2) {
-      const prizesList = document.querySelector(`.prizes__list`);
-      const prizesItems = prizesList.querySelectorAll(`.prizes__item`);
-      const images = prizesList.querySelectorAll(`img`);
-
-      const callBackArray = Array.from(images)
-        .filter((elem) => !elem.classList.contains(`img--activated`))
-        .map(imageBuilder);
-
-      prizesItems.forEach((item) => {
-        item.classList.add(`prizes__item--active`);
-      });
-
-      callBackArray.forEach((fun) => {
-        if (window.innerHeight < window.innerWidth) {
-          fun();
-        }
-      });
-    }
-  });
+  // module 3
+  imageBuilder();
 });
