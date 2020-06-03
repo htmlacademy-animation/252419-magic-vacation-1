@@ -2121,7 +2121,7 @@ img {
   .prizes__list--activated .prizes__item:nth-child(2) .prizes__desc {
     transition-delay: 7s; }
   .prizes__list--activated .prizes__item:nth-child(3) .prizes__desc {
-    transition-delay: 14s; }
+    transition-delay: 13s; }
   @media (orientation: portrait) {
     .prizes__list--activated .prizes__item:nth-child(2) .prizes__desc, .prizes__list--activated .prizes__item:nth-child(3) .prizes__desc {
       transition-delay: 0s; } }
