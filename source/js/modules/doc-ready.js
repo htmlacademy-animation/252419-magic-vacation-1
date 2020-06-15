@@ -53,4 +53,12 @@ export default () => document.addEventListener(`DOMContentLoaded`, () => {
 
   // module 3
   imageBuilder();
+
+  const paths = document.querySelectorAll(`.result path`);
+
+  paths.forEach((path) => {
+    const dashArray = path.getTotalLength();
+
+    path.style.strokeDasharray = `0,${dashArray / 3} 0,${dashArray / 3}`;
+  });
 });
