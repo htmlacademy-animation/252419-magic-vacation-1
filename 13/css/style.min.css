@@ -2549,11 +2549,11 @@ img {
   0% {
     transform: translate3d(-2px, -40px, 0); }
   60% {
-    transform: translate3d(-2px, 15px, 0); }
+    transform: translate3d(-2px, 0, 0); }
   80% {
-    transform: translate3d(-2px, 12px, 0); }
+    transform: translate3d(-2px, -3px, 0); }
   100% {
-    transform: translate3d(-2px, 15px, 0); } }
+    transform: translate3d(-2px, 0, 0); } }
 
 .rules {
   position: relative;
