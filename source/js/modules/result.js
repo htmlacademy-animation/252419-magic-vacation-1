@@ -16,19 +16,11 @@ export default () => {
 
         const paths = document.querySelectorAll(`.screen--show .result path`);
 
-        paths.forEach((path) => {
-          const dashArray = path.getTotalLength();
-          path.style.strokeDasharray = `${dashArray / 3},0 ${dashArray / 3},0`;
-        });
-
-        const paths2 = document.querySelectorAll(`.screen--show .result__lose path`);
-
-        let delay = 0;
-
-        paths2.forEach((path) => {
-          path.style.animationDelay = `${delay}s`;
-          delay += 0.08;
-        });
+        setTimeout(() => {
+          paths.forEach((path) => {
+            path.dispatchEvent(new Event(`click`));
+          });
+        }, 10);
 
         targetEl[0].classList.remove(`screen--hidden`);
       });

@@ -272,7 +272,7 @@
 .result__victory {
   opacity: 0;
   transform: scale(1.2);
-  transition: transform 1s ease, opacity 1s ease;
+  transition: transform 0.8s ease, opacity 0.8s ease;
 
   .screen--show & {
     opacity: 1;
@@ -282,17 +282,17 @@
 
 .result__lose {
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 0.8s ease;
 
   path {
-    transform: translate3d(-2px, -30px, 0);
+    transform: translate3d(-2px, -40px, 0);
   }
 
   .screen--show & {
     opacity: 1;
 
     path {
-      animation: Down 1s linear forwards;
+      animation: Down 0.8s linear forwards;
     }
   }
 }

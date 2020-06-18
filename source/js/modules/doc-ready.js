@@ -58,7 +58,27 @@ export default () => document.addEventListener(`DOMContentLoaded`, () => {
 
   paths.forEach((path) => {
     const dashArray = path.getTotalLength();
+    const animate = document.createElementNS(`http://www.w3.org/2000/svg`, `animate`);
 
-    path.style.strokeDasharray = `0,${dashArray / 3} 0,${dashArray / 3}`;
+    path.setAttribute(`stroke-dasharray`, `0 ` + Math.ceil(dashArray / 3));
+    animate.setAttribute(`attributeName`, `stroke-dasharray`);
+    animate.setAttribute(`from`, `0 ` + Math.ceil(dashArray / 3));
+    animate.setAttribute(`to`, Math.ceil(dashArray / 3) + ` 0`);
+    animate.setAttribute(`dur`, `1s`);
+    animate.setAttribute(`begin`, `click`);
+    animate.setAttribute(`fill`, `freeze`);
+    animate.setAttribute(`keyTimes`, `0; 1`);
+    animate.setAttribute(`keySplines`, `0.5 0.5 0.5 0.5`);
+
+    path.appendChild(animate);
+  });
+
+  const paths2 = document.querySelectorAll(`.result__lose path`);
+
+  let delay = 0;
+
+  paths2.forEach((path) => {
+    path.style.animationDelay = `${delay}s`;
+    delay += 0.08;
   });
 });
