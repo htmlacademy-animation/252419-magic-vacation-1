@@ -13,6 +13,15 @@ export default () => {
           return el.getAttribute(`id`) === target;
         });
         targetEl[0].classList.add(`screen--show`);
+
+        const paths = document.querySelectorAll(`.screen--show .result path`);
+
+        setTimeout(() => {
+          paths.forEach((path) => {
+            path.dispatchEvent(new Event(`click`));
+          });
+        }, 10);
+
         targetEl[0].classList.remove(`screen--hidden`);
       });
     }
