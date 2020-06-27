@@ -1,6 +1,6 @@
 <svg width="260" height="253" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g opacity="0">
-    <animate attributeName="opacity" values="0; 1" dur="0.3s" fill="freeze" begin="1s" calcMode="linear" id="svgStart"/>
+    <animate attributeName="opacity" values="0; 1" dur="0.3s" fill="freeze" begin="13s" calcMode="linear" id="svgStart"/>
 
     <g transform="translate(20 180)" opacity="0">
       <animate attributeName="opacity" values="0; 1" dur="0.4s" fill="freeze" begin="svgStart.begin" calcMode="linear" id="additionalStartAppearance"/>
