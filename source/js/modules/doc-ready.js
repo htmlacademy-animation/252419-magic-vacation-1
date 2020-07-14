@@ -1,5 +1,6 @@
 import {TypographyBuilder} from './typography-builder';
 import {imageBuilder} from './image-builder';
+import {gameTimer} from './timer';
 
 export default () => document.addEventListener(`DOMContentLoaded`, () => {
   document.body.classList.add(`load`);
@@ -79,4 +80,7 @@ export default () => document.addEventListener(`DOMContentLoaded`, () => {
     path.style.animationDelay = `${delay}s`;
     delay += 0.05;
   });
+
+  // module 4
+  gameTimer();
 });
