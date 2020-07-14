@@ -10746,16 +10746,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gameTimer", function() { return gameTimer; });
-function gameTimer(time = 5 * 60) {
+function timer(time = 5 * 60) {
   let localTime = time;
   let interval = 1000;
   let now;
   let then = Date.now();
   let elapsed;
+  let requestId;
 
-  function draw() {
-    const seconds = `${parseInt(localTime % 60, 10)}`;
-    const minutes = `${parseInt(localTime / 60 % 60, 10)}`;
+  function draw(drawTime = localTime) {
+    const seconds = `${parseInt(drawTime % 60, 10)}`;
+    const minutes = `${parseInt(drawTime / 60 % 60, 10)}`;
 
     const [minuteContent, secondContent] = document.querySelectorAll(`.game__counter span`);
 
@@ -10764,7 +10765,7 @@ function gameTimer(time = 5 * 60) {
   }
 
   function tick() {
-    const requestId = requestAnimationFrame(tick);
+    requestId = requestAnimationFrame(tick);
 
     now = Date.now();
     elapsed = now - then;
@@ -10781,6 +10782,18 @@ function gameTimer(time = 5 * 60) {
   }
 
   requestAnimationFrame(tick);
+
+  return true;
+}
+
+function gameTimer() {
+  let timerStarted = false;
+
+  document.body.addEventListener(`screenChanged`, (obj) => {
+    if (obj.detail.screenId === 4 && !timerStarted) {
+      timerStarted = timer();
+    }
+  });
 }
 
 
