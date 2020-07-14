@@ -1,5 +1,6 @@
 import {TypographyBuilder} from './typography-builder';
 import {imageBuilder} from './image-builder';
+import {gameTimer} from './timer';
 
 export default () => document.addEventListener(`DOMContentLoaded`, () => {
   document.body.classList.add(`load`);
@@ -64,11 +65,9 @@ export default () => document.addEventListener(`DOMContentLoaded`, () => {
     animate.setAttribute(`attributeName`, `stroke-dasharray`);
     animate.setAttribute(`from`, `0 ` + Math.ceil(dashArray / 3));
     animate.setAttribute(`to`, Math.ceil(dashArray / 3) + ` 0`);
-    animate.setAttribute(`dur`, `1s`);
+    animate.setAttribute(`dur`, `0.5s`);
     animate.setAttribute(`begin`, `click`);
     animate.setAttribute(`fill`, `freeze`);
-    animate.setAttribute(`keyTimes`, `0; 1`);
-    animate.setAttribute(`keySplines`, `0.5 0.5 0.5 0.5`);
 
     path.appendChild(animate);
   });
@@ -79,6 +78,9 @@ export default () => document.addEventListener(`DOMContentLoaded`, () => {
 
   paths2.forEach((path) => {
     path.style.animationDelay = `${delay}s`;
-    delay += 0.08;
+    delay += 0.05;
   });
+
+  // module 4
+  gameTimer();
 });

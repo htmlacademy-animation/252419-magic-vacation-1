@@ -1,6 +1,6 @@
 <svg width="260" height="253" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g opacity="0">
-    <animate attributeName="opacity" values="0; 1" dur="0.3s" fill="freeze" begin="1s" calcMode="linear" id="svgStart"/>
+    <animate attributeName="opacity" values="0; 1" dur="0.3s" fill="freeze" begin="13s" calcMode="linear" id="svgStart"/>
 
     <g transform="translate(20 180)" opacity="0">
       <animate attributeName="opacity" values="0; 1" dur="0.4s" fill="freeze" begin="svgStart.begin" calcMode="linear" id="additionalStartAppearance"/>
@@ -121,9 +121,9 @@
       <g id="hummingbird" transform="translate(-50 80) rotate(0 220 150)">
         <animateTransform attributeName="transform" type="translate" values="-60 80; 0 -7" calcMode="spline" keySplines="1 1 0.33 1" dur="0.35s" begin="additionalEndAppearance.end" fill="freeze" id="hummingbirdAppearance"/>
 
-        <animateTransform attributeName="transform" type="translate" values="0 -7; -10 10; 0 -7" dur="3s" begin="hummingbirdAppearance.end" fill="freeze" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -7; -10 10; 0 -7" dur="2s" begin="hummingbirdAppearance.end" fill="freeze" repeatCount="indefinite"/>
 
-        <animateTransform attributeName="transform" type="rotate" values="0 220 150; 0 220 150; -5 220 150; -5 220 150; -5 220 150; 0 220 150; 0 220 150; 0 220 150; 0 220 150; 0 220 150; -5 220 150; -5 220 150; -5 220 150; 0 220 150" dur="6s" begin="hummingbirdAppearance.end" fill="freeze" repeatCount="indefinite" additive="sum"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 220 150; 0 220 150; -5 220 150; -5 220 150; -5 220 150; 0 220 150; 0 220 150; 0 220 150; 0 220 150; 0 220 150; -5 220 150; -5 220 150; -5 220 150; 0 220 150" dur="4s" begin="hummingbirdAppearance.end" fill="freeze" repeatCount="indefinite" additive="sum"/>
 
         <path d="M 233.96 105.99 C 233.952 104.877 234.325 103.795 235.016 102.922 C 235.707 102.049 236.675 101.438 237.76 101.19 L 237.76 101.19 L 258.83 95.79 C 251.05 110.63 239.65 110.86 238.83 110.86 C 237.539 110.847 236.306 110.325 235.397 109.407 C 234.489 108.49 233.98 107.251 233.98 105.96" fill="#fff">
 
