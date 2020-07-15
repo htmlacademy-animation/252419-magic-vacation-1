@@ -1,6 +1,7 @@
 import {TypographyBuilder} from './typography-builder';
 import {imageBuilder} from './image-builder';
 import {gameTimer} from './timer';
+import {prizeCounter} from './prize-counter';
 
 export default () => document.addEventListener(`DOMContentLoaded`, () => {
   document.body.classList.add(`load`);
@@ -83,4 +84,5 @@ export default () => document.addEventListener(`DOMContentLoaded`, () => {
 
   // module 4
   gameTimer();
+  prizeCounter();
 });
