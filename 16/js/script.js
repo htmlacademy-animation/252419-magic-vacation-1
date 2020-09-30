@@ -11039,9 +11039,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const resultCanvas = () => {
   Object(_imageLoader__WEBPACK_IMPORTED_MODULE_0__["imageLoader"])([
-    `/img/win-primary-images/calf.png`,
-    `/img/win-primary-images/snowflake.png`,
-    `/img/win-primary-images/airplane.png`,
+    `img/win-primary-images/calf.png`,
+    `img/win-primary-images/snowflake.png`,
+    `img/win-primary-images/airplane.png`,
   ])
     .then(([
       calf,
