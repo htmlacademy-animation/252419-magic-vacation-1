@@ -22,4 +22,7 @@ form();
 social();
 
 const fullPageScroll = new FullPageScroll();
-fullPageScroll.init();
+
+setTimeout(() => {
+  fullPageScroll.init();
+}, 0);

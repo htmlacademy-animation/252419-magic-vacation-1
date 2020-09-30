@@ -1,3 +1,5 @@
+import {resultCanvas} from './result-canvas';
+
 export default () => {
   let showResultEls = document.querySelectorAll(`.js-show-result`);
   let results = document.querySelectorAll(`.screen--result`);
@@ -13,7 +15,21 @@ export default () => {
           return el.getAttribute(`id`) === target;
         });
         targetEl[0].classList.add(`screen--show`);
+
+        const paths = document.querySelectorAll(`.screen--show .result path`);
+
+        setTimeout(() => {
+          paths.forEach((path) => {
+            path.dispatchEvent(new Event(`click`));
+          });
+        }, 10);
+
         targetEl[0].classList.remove(`screen--hidden`);
+
+        // module 4 task 3
+        setTimeout(() => {
+          resultCanvas();
+        }, 0);
       });
     }
 

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mysterious Vacation</title>
-  <link rel="stylesheet" href="css/style.min.css">
+<!--  <link rel="stylesheet" href="css/style.min.css">-->
 </head>
 <body>
 
@@ -354,12 +354,17 @@
       <div class="screen__wrapper">
         <div class="result result--trip">
           <div class="result__image">
-            <picture>
-              <source srcset="img/result1-mob.png 1x, img/result1-mob@2x.png 2x" media="(max-width: 768px) and (orientation: portrait)">
-              <img src="img/result1.png" srcset="img/result1@2x.png 2x" alt="">
-            </picture>
+<!--            <canvas id="canvas-result5"></canvas>-->
+<!--            <canvas id="canvas-result4"></canvas>-->
+            <canvas id="canvas-result"></canvas>
+<!--            <canvas id="canvas-result2"></canvas>-->
+<!--            <canvas id="canvas-result3"></canvas>-->
+<!--            <picture>-->
+<!--              <source srcset="img/result1-mob.png 1x, img/result1-mob@2x.png 2x" media="(max-width: 768px) and (orientation: portrait)">-->
+<!--              <img src="img/result1.png" srcset="img/result1@2x.png 2x" alt="">-->
+<!--            </picture>-->
           </div>
-          <h2 class="result__title">
+          <h2 class="result__title result__victory">
             <span class="visually-hidden">ПОбеда!</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.85 109.24">
               <path d="M16,24.44V92H2.6V8H75V92H61.52V24.44H16Z" transform="translate(-2.1 -1.5)" fill="none" stroke="currentColor"/>
@@ -411,7 +416,7 @@
               <img src="img/result2.png" srcset="img/result2@2x.png 2x" alt="">
             </picture>
           </div>
-          <h2 class="result__title">
+          <h2 class="result__title result__victory">
             <span class="visually-hidden">ПОбеда!</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.85 109.24">
               <path d="M16,24.44V92H2.6V8H75V92H61.52V24.44H16Z" transform="translate(-2.1 -1.5)" fill="none" stroke="currentColor"/>
@@ -463,7 +468,7 @@
               <img src="img/result3.png" srcset="img/result3@2x.png 2x" alt="">
             </picture>
           </div>
-          <h2 class="result__title">
+          <h2 class="result__title result__lose">
             <span class="visually-hidden">Не угадал!</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660.77 109.24">
               <path d="M2.66,92V8H16.1V42.2H53.3V8H66.74V92H53.3V58.64H16.1V92H2.66Z" transform="translate(-2.16 -1.5)"
