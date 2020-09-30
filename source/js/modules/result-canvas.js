@@ -6,9 +6,9 @@ import {airplaneAnimate} from './airplaneAnimate';
 
 export const resultCanvas = () => {
   imageLoader([
-    `/img/win-primary-images/calf.png`,
-    `/img/win-primary-images/snowflake.png`,
-    `/img/win-primary-images/airplane.png`,
+    `img/win-primary-images/calf.png`,
+    `img/win-primary-images/snowflake.png`,
+    `img/win-primary-images/airplane.png`,
   ])
     .then(([
       calf,
