@@ -1,3 +1,5 @@
+import {resultCanvas} from './result-canvas';
+
 export default () => {
   let showResultEls = document.querySelectorAll(`.js-show-result`);
   let results = document.querySelectorAll(`.screen--result`);
@@ -23,6 +25,11 @@ export default () => {
         }, 10);
 
         targetEl[0].classList.remove(`screen--hidden`);
+
+        // module 4 task 3
+        setTimeout(() => {
+          resultCanvas();
+        }, 0);
       });
     }
 
